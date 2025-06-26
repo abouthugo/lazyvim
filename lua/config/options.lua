@@ -6,3 +6,5 @@ vim.filetype.add({
     brs = "brightscript",
   },
 })
+
+vim.opt.backupext = ".bak"
