@@ -2,6 +2,7 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {
+      layout = {},
       win = {
         input = {
           keys = {
@@ -18,6 +19,12 @@ return {
               mode = { "i", "n" },
             },
           },
+        },
+      },
+      formatters = {
+        file = {
+          -- whatever sane or insane value you need, default was 40
+          truncate = 40,
         },
       },
     },
