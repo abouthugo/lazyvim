@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  ---@class PluginLspOpts
   opts = {
     servers = {
       bright_script = {
@@ -14,7 +13,11 @@ return {
         root_markers = { "makefile", "Makefile", ".git" },
         -- Provide empty objects for the configuration sections the server requested
         settings = {
-          brightscript = {},
+          brightscript = {
+            diagnostics = {
+              enabled = true,
+            },
+          },
           files = {},
         },
       },
