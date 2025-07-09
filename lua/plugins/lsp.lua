@@ -9,7 +9,7 @@ return {
           "--lsp",
           "--stdio",
         },
-        filetypes = { "brightscript", "brs" },
+        filetypes = { "brightscript", "brs", "bs" },
         single_file_support = true,
         root_markers = { "makefile", "Makefile", ".git" },
         -- Provide empty objects for the configuration sections the server requested
