@@ -9,3 +9,5 @@ vim.filetype.add({
 })
 
 vim.opt.backupext = ".bak"
+
+vim.g.lazyvim_mini_snippets_in_completion = true
