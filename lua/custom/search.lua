@@ -17,6 +17,13 @@ vim.api.nvim_create_user_command(
   SearchBuilder({ url = "https://developer.roku.com/search?qs=", prompt = "  Search Roku Docs" }),
   { desc = "Search Roku Developer Documentation" }
 )
+
+vim.api.nvim_create_user_command(
+  "RoCommunitySearch",
+  SearchBuilder({ url = "https://community.roku.com/search?q=", prompt = "  Search Roku Community" }),
+  { desc = "Search google with reddit filter" }
+)
+
 vim.api.nvim_create_user_command(
   "RedditSearch",
   SearchBuilder({ url = "https://google.com/search?q=site:reddit.com ", prompt = "  Search with Reddit filter" }),
@@ -26,4 +33,5 @@ vim.api.nvim_create_user_command(
 local map = vim.keymap.set
 
 map("n", "<leader>jo", "<cmd>RoSearch<cr>", { desc = "Roku Search" })
+map("n", "<leader>jc", "<cmd>RoCommunitySearch<cr>", { desc = "Roku community search" })
 map("n", "<leader>jr", "<cmd>RedditSearch<cr>", { desc = "Reddit Filter Search" })
