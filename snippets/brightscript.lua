@@ -24,8 +24,24 @@ return {
     body = {
       '\t\t@it("$1")',
       "\t\tsub _()",
-      "\t\t$0",
+      "\t\t\t$0",
       "\t\tend sub",
+    },
+  },
+  ["Sub"] = {
+    prefix = "sub",
+    body = {
+      "sub $1($2)",
+      "\t$0",
+      "end sub",
+    },
+  },
+  ["Function"] = {
+    prefix = "func",
+    body = {
+      "Function $1($2)",
+      "\t$0",
+      "end Function",
     },
   },
   ["Observe field"] = {
@@ -39,5 +55,9 @@ return {
   ["Find Node"] = {
     prefix = "fnode",
     body = { 'm.top.findNode("$0")' },
+  },
+  ["Print"] = {
+    prefix = "print",
+    body = { 'Print "[*] $0"' },
   },
 }

@@ -60,13 +60,13 @@ return {
     prefix = "snip",
     body = {
       '\t["$1"] = {',
-      '\t\tprefix = "$2"',
+      '\t\tprefix = "$2",',
       "\t\tbody = $0",
       "\t}",
     },
   },
-  ["Current Date"] = {
-    prefix = "_date",
-    body = { "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE" },
+  ["YYYY-MM-DD Date"] = {
+    prefix = "today",
+    body = "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
   },
 }
