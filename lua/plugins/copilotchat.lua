@@ -112,7 +112,12 @@ Default flow:
       Wording = "Please improve the grammar and wording of the following text.",
       Concise = "Please rewrite the following text to make it more concise.",
       Commit = {
-        prompt = "Write commit message for the change with conventional commits specification. Limit to 50 words or less.",
+        prompt = [[
+Write commit message for the change with conventional commits specification.
+Limit the first line to 50 characters or less.
+For additional details, use a well-structured body section.
+Use bullet points (*) for clarity.
+          ]],
         resources = {
           "gitdiff:staged",
         },
