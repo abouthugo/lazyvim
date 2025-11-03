@@ -10,7 +10,7 @@ function M.create_note()
     local zettel_dir = vim.fn.finddir("00 - Zettelkasten", vim.fn.getcwd() .. ";")
 
     if zettel_dir == "" then
-      vim.notify("0 Zettelkasten folder not found", vim.log.levels.ERROR)
+      vim.notify("Zettelkasten folder not found", vim.log.levels.ERROR)
       return
     end
 
