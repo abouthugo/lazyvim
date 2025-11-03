@@ -34,4 +34,8 @@ return {
       "> $0",
     },
   },
+  ["todo checkbox"] = {
+    prefix = "todo",
+    body = "- [${1: }] $0",
+  },
 }
