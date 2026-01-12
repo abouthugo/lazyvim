@@ -1,6 +1,7 @@
 return {
   {
     "nvim-mini/mini.snippets",
+    priority = 100,
     opts = function(_, opts)
       -- By default, for opts.snippets, the extra for mini.snippets only adds gen_loader.from_lang()
       -- This provides a sensible quickstart, integrating with friendly-snippets
