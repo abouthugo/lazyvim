@@ -2,10 +2,7 @@ return {
   "CopilotC-Nvim/CopilotChat.nvim",
   opts = {
     model = "claude-sonnet-4.5",
-    system_prompt = function()
-      local file_path = vim.fn.getcwd() .. "/.github/instructions.md"
-      if vim.fn.filereadable(file_path) == 0 then
-        return [[
+    system_prompt = [[
 When asked for your name, you must respond with "Copilot".
 Follow the user's requirements carefully & to the letter.
 Keep your answers short and impersonal.
@@ -90,11 +87,7 @@ Default flow:
 3. If clear, solve minimally and correctly.
 4. Offer optional enhancements succinctly.
 </instructions>
-      ]]
-      end
-      local file_content = vim.fn.readfile(file_path)
-      return table.concat(file_content, "\n")
-    end,
+      ]],
     prompts = {
       -- Code related prompts
       Explain = "Please explain how the following code works.",
