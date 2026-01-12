@@ -1,6 +1,7 @@
 return {
   "CopilotC-Nvim/CopilotChat.nvim",
   opts = {
+    model = "claude-sonnet-4.5",
     system_prompt = function()
       local file_path = vim.fn.getcwd() .. "/.github/instructions.md"
       if vim.fn.filereadable(file_path) == 0 then
@@ -110,17 +111,27 @@ Default flow:
       Summarize = "Please summarize the following text.",
       Spelling = "Please correct any grammar and spelling errors in the following text.",
       Wording = "Please improve the grammar and wording of the following text.",
-      Concise = "Please rewrite the following text to make it more concise.",
+      Plan = [[
+      For multi-step plans, divide them into multiple phases with different
+      headings. That way I can describe which phases to implement at a time so
+      we don't have to implement everything at once.
+      ]],
+      Concise = "In all interactions, plans, and commit messages, be extremely concise and sacrifice grammar for the sake of concision.",
       Commit = {
         prompt = [[
-Write commit message for the change with conventional commits specification.
-Limit the first line to 50 characters or less.
-For additional details, use a well-structured body section.
-Use bullet points (*) for clarity.
-          ]],
+          Write commit message for the change with conventional commits specification.
+          Limit the first line to 50 characters or less. For additional details, use a
+          well-structured body section. Use bullet points (*) for clarity.
+        ]],
         resources = {
           "gitdiff:staged",
         },
+      },
+      PrFeedback = {
+        prompt = [[
+        Review the code and its quality. Look for any areas that are complex and could be simplified.
+        ]],
+        resources = { "gitdiff:HEAD..main" },
       },
     },
   },
