@@ -8,9 +8,9 @@ return {
           "--lsp",
           "--stdio",
         },
-        filetypes = { "brightscript", "brs", "bs" },
+        filetypes = { "brightscript", "brs", "bs", "xml" },
         log_level = "TRACE",
-        single_file_support = true,
+        -- single_file_support = true,
         root_markers = { "bsconfig.json", "makefile", "Makefile", ".git" },
         -- Provide empty objects for the configuration sections the server requested
         settings = {
@@ -19,7 +19,7 @@ return {
               enabled = true,
             },
           },
-          files = {},
+          -- files = {},
         },
       },
     },
