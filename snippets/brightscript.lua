@@ -6,6 +6,9 @@ return {
       '\t@SGNode("$1")',
       '\t@suite("$1 tests")',
       "\tclass $1Tests extends rooibos.BaseTestSuite",
+      "\t'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++",
+      '\t@describe("tests UUID generation")',
+      "\t'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n",
       "\t\t$0",
       "\tend class",
       "end namespace",
@@ -58,6 +61,10 @@ return {
   },
   ["Print"] = {
     prefix = "print",
-    body = { 'Print "[*] $0"' },
+    body = {
+      "print `[*] $0`",
+      'print " ├── $1:", $1',
+      'print " └── $2:", $2',
+    },
   },
 }
