@@ -56,6 +56,18 @@ return {
       "Goal: best possible answer for [audience/decision]",
     },
   },
+  ["AI ideal commit history"] = {
+    prefix = "ai-commit-history",
+    body = {
+      "Reimplement the current branch on a new branch with a clean, narrative-quality git commit history suitable for reviewer comprehension.",
+    },
+  },
+  ["AI Topic Research"] = {
+    prefix = "ai-topic-research",
+    body = {
+      "What would be a good group of people to explore $0? What would they say?",
+    },
+  },
   ["Snippet Entry"] = {
     prefix = "snip",
     body = {
