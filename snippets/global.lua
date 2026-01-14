@@ -81,4 +81,12 @@ return {
     prefix = "today",
     body = "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
   },
+  ["Roku Test Prompt"] = {
+    prefix = "ai-bs-test",
+    body = [[
+Create test cases for $1 such that it addresses all the TODO comments
+in #buffer:$0
+#buffer:listed
+    ]],
+  },
 }
