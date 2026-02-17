@@ -122,9 +122,10 @@ Default flow:
       },
       PrFeedback = {
         prompt = [[
-        Review the code and its quality. Look for any areas that are complex and could be simplified.
+        Review the code and its quality. Look for any areas that are complex
+        and could be simplified.
         ]],
-        resources = { "gitdiff:HEAD..main" },
+        resources = { "gitdiff:main..HEAD" },
       },
     },
   },
