@@ -8,7 +8,7 @@ return {
           "--lsp",
           "--stdio",
         },
-        filetypes = { "brightscript", "brs", "bs", "xml" },
+        filetypes = { "brightscript", "brs", "bs" },
         log_level = "TRACE",
         -- single_file_support = true,
         root_markers = { "bsconfig.json", "makefile", "Makefile", ".git" },
