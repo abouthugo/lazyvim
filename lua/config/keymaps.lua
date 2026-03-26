@@ -12,3 +12,7 @@ end
 local npm = require("custom.npm_runner")
 -- Create the keymap (e.g., <leader>ns for "NPM Scripts")
 vim.keymap.set("n", "<leader>cx", npm.run_script, { desc = "Run npm script from package.json" })
+
+local bsconfig = require("custom.bsconfig_switcher")
+vim.keymap.set("n", "<leader>jw", bsconfig.switch_to_work, { desc = "BrightScript: use work device" })
+vim.keymap.set("n", "<leader>jh", bsconfig.switch_to_home, { desc = "BrightScript: use home device" })
