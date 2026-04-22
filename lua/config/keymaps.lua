@@ -16,3 +16,6 @@ vim.keymap.set("n", "<leader>cx", npm.run_script, { desc = "Run npm script from 
 local bsconfig = require("custom.bsconfig_switcher")
 vim.keymap.set("n", "<leader>jw", bsconfig.switch_to_work, { desc = "BrightScript: use work device" })
 vim.keymap.set("n", "<leader>jh", bsconfig.switch_to_home, { desc = "BrightScript: use home device" })
+
+local roku = require("custom.roku_capture")
+vim.keymap.set("n", "<leader>jc", roku.capture, { desc = "Roku: take screenshot" })
