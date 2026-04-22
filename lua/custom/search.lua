@@ -34,4 +34,4 @@ local map = vim.keymap.set
 
 map("n", "<leader>jo", "<cmd>RoSearch<cr>", { desc = "Roku Search" })
 map("n", "<leader>jc", "<cmd>RoCommunitySearch<cr>", { desc = "Roku community search" })
-map("n", "<leader>jr", "<cmd>RedditSearch<cr>", { desc = "Reddit Filter Search" })
+map("n", "<leader>js", "<cmd>RedditSearch<cr>", { desc = "Reddit Filter Search" })

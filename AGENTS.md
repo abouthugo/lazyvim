@@ -222,4 +222,5 @@ or `.xml` (SceneGraph) file inside a real Roku project.
 | `<leader>fz`  | Create Zettelkasten note (when in CWD) |
 | `<leader>jo`  | Search Roku Developer Docs             |
 | `<leader>jc`  | Search Roku Community Forum            |
-| `<leader>jr`  | Reddit-filtered Google search          |
+| `<leader>jr`  | Paste Roku registry value at cursor    |
+| `<leader>js`  | Reddit-filtered Google search          |

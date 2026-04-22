@@ -19,3 +19,6 @@ vim.keymap.set("n", "<leader>jh", bsconfig.switch_to_home, { desc = "BrightScrip
 
 local roku = require("custom.roku_capture")
 vim.keymap.set("n", "<leader>jc", roku.capture, { desc = "Roku: take screenshot" })
+
+local roku_registry = require("custom.roku_registry")
+vim.keymap.set("n", "<leader>jr", roku_registry.paste_value, { desc = "Roku: paste registry value" })
